@@ -1,5 +1,5 @@
 * {
-  outline: red 1px solid;
+  /*outline: red 1px solid; */
 }
 
 
@@ -37,7 +37,9 @@ body {
   height: 494px;
 }
 
-.ryu-ready, .ryu-throwing, .ryu-cool {
+
+
+.ryu-ready, .ryu-throwing, .ryu-cool, .st-logo, .jQuery-logo, .instructions, .hadouken, .combination {
   display: none;
 } 
 
@@ -51,24 +53,60 @@ body {
 
 .ryu-throwing {
   background-image: url('../images/ryu-throwing-hadouken.png');
+
 }
 
 .ryu-cool {
   background-image: url('../images/ryu-cool.gif');
 }
 
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+.st-logo {
+  background-image: url("../images/ST-logo.png");
+}
+
+.jQuery-logo {
+  background-image: url("../images/jquery-logo.png");
+}
+
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .st-logo, .jQuery-logo {
   background-repeat: no-repeat;
+}
+
+
+.hadouken, .st-logo, .jQuery-logo, .combination {
+  position: absolute;
 }
 
 .hadouken {
   background-image: url('../images/hadouken.gif');
   width: 156px; 
   height: 90px;
-  display: none;
   float: left;
-  position: absolute;
   z-index: 10;
   top: 10.625rem;
   left: 39.375rem;
+}
+
+.st-logo, .jQuery-logo {
+  position: absolute;
+  top: 8rem;
+  right: 10rem;
+  float:right;
+  width: 500px;
+  height: 500px;
+}
+
+.combination {
+  top: 10rem;
+  right: 20rem;
+  font-size: 3rem;
+  color: #0769AD;
+}
+
+.instructions {
+  position: absolute;
+  top: 6rem;
+  right: 7rem;
+  font-size: 1.5rem;
+  font-family: "Indie Flower", cursive;
 }

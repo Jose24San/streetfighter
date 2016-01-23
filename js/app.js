@@ -1,5 +1,46 @@
-$(document).ready(function(){
-    playTheme();
+function playHadouken() {
+    $("#intro-theme")[0].pause();
+    $('#hadouken-sound')[0].volume = 0.5;
+    $('#hadouken-sound')[0].load();
+    $('#hadouken-sound')[0].play();
+}
+
+var techno = false;
+function playCool () {
+    techno = !techno;
+     if (techno == true) {
+        $('#intro-theme')[0].pause();
+        $('#Toulouse-song')[0].volume = 0.5;
+        // $('#Toulouse-song')[0].load();
+        $('#Toulouse-song')[0].play();
+     }
+}
+
+function doIntro() {
+  $('#intro-theme')[0].volume = 0.3;
+  $('#intro-theme')[0].play();
+  $('.st-logo').fadeIn(3500, function() {
+    $(this).fadeOut(1000, function() {
+
+      $('.combination').fadeIn(1500, function() {
+
+        $(this).fadeOut(1000, function() {
+
+          $('.jQuery-logo').fadeIn(1500, function() {
+
+            $(this).fadeOut(1500, function() {
+
+              $('.instructions').fadeIn(1000);
+            });
+          })
+        })
+      })
+    })
+  })
+}
+
+//$(document).ready(function(){
+    doIntro();
     $('.ryu').mouseenter(function(){
         $('.ryu-still').hide();
         $('.ryu-ready').show();
@@ -32,40 +73,13 @@ $(document).ready(function(){
     		$(".ryu-cool").show();
     	}
     }).keyup(function(event){
-    	if (event.keyCode == 88)
-    	$("#Toulouse-song")[0].pause();
-    	$("#Toulouse-song")[0].load();
-    	$(".ryu-cool").hide();
-    	$(".ryu-still").show();
-    })
+    	if (event.keyCode == 88) {
+            $("#Toulouse-song")[0].pause();
+            $("#Toulouse-song")[0].load();
+            $(".ryu-cool").hide();
+            $(".ryu-still").show();
+        }
+    });
+//});
 
 
-});
-
-function playHadouken() {
-    $('#hadouken-sound')[0].volume = 0.5;
-    $('#hadouken-sound')[0].load();
-    $('#hadouken-sound')[0].play();
-}
-
- 
-var techno = false;
-function playCool () {
-    techno = !techno;
- 	 if (techno == true) {
-   		$('#intro-theme')[0].pause();
-    	//$('#cool')[0].load()   // what is this for?
-        $('#Toulouse-song')[0].volume = 0.5;
-       //('#Toulouse-song')[0].play();
-   	    $('#Toulouse-song')[0].play();
- 	 }
-}
-
-
-var theme = false;
-function playTheme (){
-	theme = !theme;
-	if (theme == true){
-		$("#intro-theme")[0].play();
-	}
-}  
