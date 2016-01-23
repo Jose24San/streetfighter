@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    playTheme();
     $('.ryu').mouseenter(function(){
         $('.ryu-still').hide();
         $('.ryu-ready').show();
@@ -26,12 +27,14 @@ $(document).ready(function(){
 
     $(document).keydown(function(event){
     	if (event.keyCode == 88){
-    		ryuCool();
+    		playCool();
     		$(".ryu-action").hide();
     		$(".ryu-cool").show();
     	}
     }).keyup(function(event){
     	if (event.keyCode == 88)
+    	$("#Toulouse-song")[0].pause();
+    	$("#Toulouse-song")[0].load();
     	$(".ryu-cool").hide();
     	$(".ryu-still").show();
     })
@@ -45,6 +48,24 @@ function playHadouken() {
     $('#hadouken-sound')[0].play();
 }
 
- function ryuCool() {
-	console.log("success you dousche");
+ 
+var techno = false;
+function playCool () {
+    techno = !techno;
+ 	 if (techno == true) {
+   		$('#intro-theme')[0].pause();
+    	//$('#cool')[0].load()   // what is this for?
+        $('#Toulouse-song')[0].volume = 0.5;
+       //('#Toulouse-song')[0].play();
+   	    $('#Toulouse-song')[0].play();
+ 	 }
+}
+
+
+var theme = false;
+function playTheme (){
+	theme = !theme;
+	if (theme == true){
+		$("#intro-theme")[0].play();
 	}
+}  
