@@ -17,6 +17,7 @@ function playCool () {
 }
 
 function doIntro() {
+  $(".action").hide();
   $('#intro-theme')[0].volume = 0.3;
   $('#intro-theme')[0].play();
   $('.st-logo').fadeIn(3500, function() {
@@ -30,7 +31,15 @@ function doIntro() {
 
             $(this).fadeOut(1500, function() {
 
-              $('.instructions').fadeIn(1000);
+                $('.ken-vs-ryu').fadeIn(2000, function() {
+
+                    $(this).fadeOut(1000, function() {
+
+                        $('.ryu-still').fadeIn(1000);
+                        $('.ryu-instructions').fadeIn(1000);
+                        $('.ken-left-stance').fadeIn(1000);
+                    });
+                }) 
             });
           })
         })
@@ -38,6 +47,8 @@ function doIntro() {
     })
   })
 }
+
+
 
 //$(document).ready(function(){
     doIntro();
@@ -92,10 +103,10 @@ function doIntro() {
 
     // Ken animation 
     $(document).keydown(function(event){
-        if (event.keyCode == 69){
+        if (event.keyCode === 69){ // 69 = e 
             $(".action").hide();
             $(".ken-ready").show();
-        } else if ( event.keyCode == 70){
+        } else if ( event.keyCode === 70){ // 70 = f 
             $(".action").hide();
             $(".ken-throwing").show();
             $('.hadouken').finish().show().animate( /*placement of beginning */
@@ -108,6 +119,9 @@ function doIntro() {
         } 
     })
     .keyup(function(){// ryu goes back to his ready position
-        $('.ken-throwing').hide();
-        $('.ken-ready').show();
+        if ( event.keyCode === 69 || event.keyCode === 70){
+            $('.ken-throwing').hide();
+            $('.ken-ready').show();
+        }
+        
     });
