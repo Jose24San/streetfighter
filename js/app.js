@@ -53,16 +53,16 @@ function doIntro() {
 //$(document).ready(function(){
     doIntro();
     $('.ryu').mouseenter(function(){
-        $('.action').hide();
+        $('.ryu-action').hide();
         $('.ryu-evil-ready').show();
     })
     .mouseleave(function() {
+        $('.ryu-action').hide();
         $('.ryu-ready').show();
-        $('.ryu-evil-ready').hide();
     })
     .mousedown(function(){
         playHadouken();// play song 
-        $('.action').hide();
+        $('.ryu-action').hide();
         $('.ryu-throwing').show();
         $('.hadouken').finish().show().animate( /*placement of beginning */
             {'left': '820px'},
@@ -81,24 +81,24 @@ function doIntro() {
     $(document).keydown(function(event){
     	if (event.keyCode == 88){// x
     		playCool();
-    		$(".action").hide();
+    		$(".ryu-action").hide();
     		$(".ryu-cool").show();
     	} else if ( event.keyCode === 75){// k
-            $(".action").hide();
+            $(".ryu-action").hide();
             $(".ryu-kick").show();
         } else if ( event.keyCode === 80){// p
-            $(".action").hide();
+            $(".ryu-action").hide();
             $(".ryu-punch").show();
             console.log("punch");
         } else if ( event.keyCode === 74) {// j
-            $(".action").hide();
+            $(".ryu-action").hide();
             $(".ryu-stepping-kick").show();
         }
     }).keyup(function(event){
     	if (event.keyCode === 88 || event.keyCode === 75 || event.keyCode === 80 || event.keyCode === 74) {
             $("#Toulouse-song")[0].pause();
             $("#Toulouse-song")[0].load();
-            $(".action").hide();
+            $(".ryu-action").hide();
             $(".ryu-ready").show();
         }
     });

@@ -87,9 +87,10 @@ body {
 
 .ryu-instructions {
   display: none;
+  list-style: none;
   top: -1rem;
-  right: 48rem;
-  font-size: 1.5rem;
+  right: 51rem;
+  font-size: 1.3rem;
   font-family: "Indie Flower", cursive;
 }
 
@@ -113,8 +114,6 @@ body {
   width: 420px;
   height: 355px;
 }
-
-
 
 .ryu-ready {
   background-image: url('../images/ryu-ready-resized.gif');
@@ -183,16 +182,49 @@ body {
 }
 
 
+.ken-left-stance {
+  background-image: url('../images/ken-left-stance.gif');
+  top: 15rem;
+  left: 65rem;
+}
+
+.ken-throwing-left {
+  background-image: url('../images/ken-throwing-left.jpg');
+  top: 23rem;
+  left: 60rem;
+}
+
+.ken-standing-kick {
+  background-image: url('../images/ken-standing-kick.gif');
+  top: 15rem;
+  left: 65rem;
+}
+
+.ken-shinryuken {
+  background-image: url('../images/ken-shinryuken.gif');
+  top: 15rem;
+  left: 65rem;
+}
+
+.hadouken-left {
+  background-image: url('../images/hadouken-left.gif');
+  top: 15rem;
+  left: 65rem;
+}
+
+.ken-kick {
+  background-image: url('../images/ken-kick.gif');
+  top: 15rem;
+  left: 65rem;
+}
+
+
+/*deleted */
 .ken-ready {
   background-image: url('../images/ken-ready.gif');
   top: 15rem;
   left: 10rem;
-}
-
-.ken-throwing {
-  background-image: url('../images/ken-throwing.jpg');
-  top: 23rem;
-  left: 12rem;
+  z-index: 20;
 }
 
 .ken-throwing-left {
@@ -201,11 +233,6 @@ body {
   left: 59rem;
 }
 
-.ken-left-stance {
-  background-image: url('../images/ken-left-stance.gif');
-  top: 15rem;
-  left: 65rem;
-}
 
 
 
