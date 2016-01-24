@@ -35,7 +35,7 @@ function doIntro() {
 
                     $(this).fadeOut(1000, function() {
 
-                        $('.ryu-still').fadeIn(1000);
+                        $('.ryu-ready').fadeIn(1000);
                         $('.ryu-instructions').fadeIn(1000);
                         $('.ken-left-stance').fadeIn(1000);
                     });
@@ -54,11 +54,11 @@ function doIntro() {
     doIntro();
     $('.ryu').mouseenter(function(){
         $('.action').hide();
-        $('.ryu-ready').show();
+        $('.ryu-evil-ready').show();
     })
     .mouseleave(function() {
-        $('.ryu-still').show();
-        $('.ryu-ready').hide();
+        $('.ryu-ready').show();
+        $('.ryu-evil-ready').hide();
     })
     .mousedown(function(){
         playHadouken();// play song 
@@ -79,24 +79,27 @@ function doIntro() {
 
     // Ryu animation
     $(document).keydown(function(event){
-    	if (event.keyCode == 88){
+    	if (event.keyCode == 88){// x
     		playCool();
     		$(".action").hide();
     		$(".ryu-cool").show();
-    	} else if ( event.keyCode == 75){
+    	} else if ( event.keyCode === 75){// k
             $(".action").hide();
             $(".ryu-kick").show();
-        } else if ( event.keyCode == 80){
+        } else if ( event.keyCode === 80){// p
             $(".action").hide();
             $(".ryu-punch").show();
             console.log("punch");
-        } 
+        } else if ( event.keyCode === 74) {// j
+            $(".action").hide();
+            $(".ryu-stepping-kick").show();
+        }
     }).keyup(function(event){
-    	if (event.keyCode == 88 || event.keyCode == 75 || event.keyCode == 80) {
+    	if (event.keyCode === 88 || event.keyCode === 75 || event.keyCode === 80 || event.keyCode === 74) {
             $("#Toulouse-song")[0].pause();
             $("#Toulouse-song")[0].load();
             $(".action").hide();
-            $(".ryu-still").show();
+            $(".ryu-ready").show();
         }
     });
 //});
@@ -118,7 +121,7 @@ function doIntro() {
             });
         } 
     })
-    .keyup(function(){// ryu goes back to his ready position
+    .keyup(function(){// ken goes back to his ready position
         if ( event.keyCode === 69 || event.keyCode === 70){
             $('.ken-throwing').hide();
             $('.ken-ready').show();

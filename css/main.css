@@ -23,7 +23,7 @@ body {
   min-width: 1200px;
   height: 650px;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .ryu {
@@ -35,46 +35,58 @@ body {
     height: 625px;
 }
 
+.position {
+  position: absolute;
+}
+
+.display {
+  display: none;
+  background-repeat: no-repeat;
+}
+
+
 /* ---introduction animations ---- */
 
-.st-logo, .jQuery-logo {
-  position: absolute;
-  float:right;
-  width: 377px;
-  height: 176px;
+.st-logo {
+  background-image: url("../images/ST-logo.png");
+  top: 8rem;
+  right: 31rem;
+  width: 250px;
+  height: 145px;
+  z-index: 20;
 }
 
 .jQuery-logo {
+  background-image: url("../images/jquery-logo.png");
   top: 5rem;
   right: 30rem;
+  width: 355px;
+  height: 145px;
+  z-index: 20;
+
 }
 
-.st-logo {
+.combination { /* in combination with text */
   top: 5rem;
-  right: 27rem;
-}
-
-.combination {
-  top: 5rem;
-  right: 29rem;
+  right: 26rem;
   font-size: 3rem;
   color: #0769AD;
+  z-index: 20;
 }
 
 .ken-vs-ryu {
   background-image: url('../images/ken-vs-ryu.gif');
-  position: absolute;
-  top: 9rem;
+  top: 16rem;
   left: 27rem;
   width:450px;
   height: 400px;
+  z-index: 20;
 }
 
 /* -------- Controls --------- */
 
 .ryu-instructions {
   display: none;
-  position: absolute;
   top: -1rem;
   right: 48rem;
   font-size: 1.5rem;
@@ -82,25 +94,12 @@ body {
 }
 
 
-
 /* ---Shared animations ---- */
-
-.ryu-ready, .ryu-throwing, .ryu-cool, .st-logo, .jQuery-logo, .instructions, .hadouken, .combination, .ryu-kick, .ryu-punch, .ken-ready, .ken-throwing, .ken-throwing-left, .ken-left-stance, .ken-vs-ryu {
-  display: none;
-  background-repeat: no-repeat;
-} 
-
-
-
-.hadouken, .st-logo, .jQuery-logo, .combination {
-  position: absolute;
-}
 
 .hadouken {
   background-image: url('../images/hadouken-resized.gif');
   width: 156px; 
   height: 90px;
-  float: left;
   z-index: 10;
   top: 24.625rem;
   left: 23.375rem;
@@ -110,7 +109,7 @@ body {
 
 
 
-.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .ryu-kick, .ryu-kick {
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .ryu-kick, .ryu-kick, .ryu-evil-ready, .ryu-evil-mad {
   width: 420px;
   height: 355px;
 }
@@ -119,7 +118,6 @@ body {
 
 .ryu-ready {
   background-image: url('../images/ryu-ready-resized.gif');
-  position: absolute;
   top: 13rem;
   left: 4rem;
 }
@@ -127,46 +125,54 @@ body {
 .ryu-still {
   background-image: url('../images/ryu-standing-still-resized.jpg');
   background-repeat: no-repeat;
-  position: absolute;
   top: 14rem;
   left: 8rem;
 }
 
 .ryu-throwing {
   background-image: url('../images/ryu.throwing.hadouken.jpg');
-  position: absolute;
   top: 21rem;
   left: 10rem;
 }
 
 .ryu-cool {
   background-image: url('../images/ryu-cool-resized.gif');
-  position: absolute;
   top: 12rem;
   left: 4rem;
 }
 
 .ryu-kick {
   background-image: url('../images/flying-kick-resized.gif');
-  position: absolute;
   top: 13rem;
   left: 0rem;
 }
-
 .ryu-punch {
   background-image: url("../images/ryu-flying-punch-resized.gif");
   width: 420px;
   height: 700px;
-  position: absolute;
+  
 }
 
-.st-logo {
-  background-image: url("../images/ST-logo.png");
+.ryu-stepping-kick {
+  background-image: url('../images/ryu-stepping-kick.gif');
+  width: 571px;
+  height: 355px;
+  top: 18rem;
+  left: 6rem;
 }
 
-.jQuery-logo {
-  background-image: url("../images/jquery-logo.png");
+.ryu-evil-mad {
+  background-image: url('../images/ryu-evil-mad.gif');
+  top: 16rem;
+  left: 7rem;
 }
+
+.ryu-evil-ready {
+  background-image: url('../images/ryu-evil-ready.gif');
+  top: 16rem;
+  left: 12rem;
+}
+
 
 
 /* -------- Ken's animation --------- */
@@ -174,34 +180,29 @@ body {
 .ken-ready, .ken-throwing, .ken-throwing-left, .ken-left-stance {
   width:300px;
   height: 400px;
-  display:none;
 }
 
 
 .ken-ready {
   background-image: url('../images/ken-ready.gif');
-  position: absolute;
   top: 15rem;
   left: 10rem;
 }
 
 .ken-throwing {
   background-image: url('../images/ken-throwing.jpg');
-  position: absolute;
   top: 23rem;
   left: 12rem;
 }
 
 .ken-throwing-left {
   background-image: url('../images/ken-throwing-left.jpg');
-  position: absolute;
   top: 21rem;
   left: 59rem;
 }
 
 .ken-left-stance {
   background-image: url('../images/ken-left-stance.gif');
-  position: absolute;
   top: 15rem;
   left: 65rem;
 }
