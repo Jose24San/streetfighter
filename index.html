@@ -3,16 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Streetfighter</title>
+	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
 	<div class="main">
-		<div class="ryu" tabindex="1">
-			 <div class="ryu-still ryu-action"></div>
- 			 <div class="ryu-ready ryu-action"></div>
-  			 <div class="ryu-throwing ryu-action"></div>
-  			 <div class="ryu-cool ryu-action"></div>
+		<div class="ryu">
+			 <div class="ryu-still action"></div>
+ 			 <div class="ryu-ready action"></div>
+  			 <div class="ryu-throwing action"></div>
+  			 <div class="ryu-cool action"></div>
+  			 <div class="ryu-kick action"></div>
+  			 <div class="ryu-punch action"></div>
+		</div>
+
+		<div class="ken">
+			<div class="ken-ready action"></div>
+			<div class="ken-throwing action"></div>
+			<div class="ken-throwing-left action"></div>
+			<div class="ken-left-stance action"></div>
 		</div>
 
 		<div class="hadouken"></div>
@@ -23,10 +34,13 @@
 			<div class="combination">
 				<p>In combination with</p>
 			</div>
-			<div class="instructions">
-				<p>Click on Ryu to shoot a hadouken</p>
-				<p>Hold down x to make him look cool and play his theme</p>
-			</div>
+			<ul class="instructions">
+				<li>Click on Ryu to shoot a hadouken</li>
+				<li>Mouse over Ryu to switch to ready position</li>
+				<li>Hold down p for flying punch</li>
+				<li>Hold down x for Ryu's cool pose with theme song</li>
+				<li>Hold down k for flying kick</li>
+			</ul>
 		</div>
 	</div>
 	<audio id="hadouken-sound" src="sound/hadouken.mp3"></audio>

@@ -5,7 +5,7 @@ function playHadouken() {
     $('#hadouken-sound')[0].play();
 }
 
-var techno = false;
+var techno = false; // why do this?
 function playCool () {
     techno = !techno;
      if (techno == true) {
@@ -42,7 +42,7 @@ function doIntro() {
 //$(document).ready(function(){
     doIntro();
     $('.ryu').mouseenter(function(){
-        $('.ryu-still').hide();
+        $('.action').hide();
         $('.ryu-ready').show();
     })
     .mouseleave(function() {
@@ -51,14 +51,14 @@ function doIntro() {
     })
     .mousedown(function(){
         playHadouken();// play song 
-        $('.ryu-ready').hide();
+        $('.action').hide();
         $('.ryu-throwing').show();
         $('.hadouken').finish().show().animate( /*placement of beginning */
-            {'left': '1020px'},
+            {'left': '820px'},
             500,
             function(){/*Ater animation is over put it back at the beginning */
                 $(this).hide();
-                $(this).css('left', '520px');
+                $(this).css('left', '378px');
             });
     })
     .mouseup(function(){// ryu goes back to his ready position
@@ -66,20 +66,48 @@ function doIntro() {
         $('.ryu-ready').show();
     });
 
+    // Ryu animation
     $(document).keydown(function(event){
     	if (event.keyCode == 88){
     		playCool();
-    		$(".ryu-action").hide();
+    		$(".action").hide();
     		$(".ryu-cool").show();
-    	}
+    	} else if ( event.keyCode == 75){
+            $(".action").hide();
+            $(".ryu-kick").show();
+        } else if ( event.keyCode == 80){
+            $(".action").hide();
+            $(".ryu-punch").show();
+            console.log("punch");
+        } 
     }).keyup(function(event){
-    	if (event.keyCode == 88) {
+    	if (event.keyCode == 88 || event.keyCode == 75 || event.keyCode == 80) {
             $("#Toulouse-song")[0].pause();
             $("#Toulouse-song")[0].load();
-            $(".ryu-cool").hide();
+            $(".action").hide();
             $(".ryu-still").show();
         }
     });
 //});
 
-
+    // Ken animation 
+    $(document).keydown(function(event){
+        if (event.keyCode == 69){
+            $(".action").hide();
+            $(".ken-ready").show();
+        } else if ( event.keyCode == 70){
+            $(".action").hide();
+            $(".ken-throwing").show();
+            $('.hadouken').finish().show().animate( /*placement of beginning */
+            {'left': '820px'},
+            500,
+            function(){/*Ater animation is over put it back at the beginning */
+                $(this).hide();
+                $(this).css('left', '378px');
+            });
+        } 
+    })
+    .keyup(function(){// ryu goes back to his ready position
+        $('.ken-throwing').hide();
+        $('.ken-ready').show();
+    });
