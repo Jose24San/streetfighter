@@ -1,6 +1,6 @@
-* {
+/* * {
    border: 1px solid red;
-}
+} /* 
 
 /* ----- Layout Style -----*/
 
@@ -50,7 +50,7 @@ body {
 .st-logo {
   background-image: url("../images/ST-logo.png");
   top: 8rem;
-  right: 31rem;
+  right: 35rem;
   width: 250px;
   height: 145px;
   z-index: 20;
@@ -85,13 +85,20 @@ body {
 
 /* -------- Controls --------- */
 
-.ryu-instructions {
-  display: none;
+.fighter-codes ul {
   list-style: none;
-  top: -1rem;
-  right: 51rem;
   font-size: 1.3rem;
   font-family: "Indie Flower", cursive;
+}
+
+.ryu-instructions {
+  top: -1rem;
+  right: 51rem;
+}
+
+.ken-instructions {
+  top: -1rem;
+  right: 7rem;
 }
 
 
@@ -196,42 +203,36 @@ body {
 
 .ken-standing-kick {
   background-image: url('../images/ken-standing-kick.gif');
-  top: 15rem;
-  left: 65rem;
+  width:35rem;
+  height: 27.25rem;
+  top: 10rem;
+  left: 45rem;
 }
 
 .ken-shinryuken {
   background-image: url('../images/ken-shinryuken.gif');
-  top: 15rem;
-  left: 65rem;
+  top: -5rem;
+  left: 53rem;
+  width: 32.18rem;
+  height: 41.37rem;
 }
 
 .hadouken-left {
   background-image: url('../images/hadouken-left.gif');
-  top: 15rem;
-  left: 65rem;
+  top: 25rem;
+  right: 22rem;
+  width: 5.68rem;
+  height: 4.625rem;
 }
 
 .ken-kick {
   background-image: url('../images/ken-kick.gif');
-  top: 15rem;
-  left: 65rem;
+  top: -1rem;
+  left: 42rem;
+  width: 38.37rem;
+  height: 37.375rem;
 }
 
-
-/*deleted */
-.ken-ready {
-  background-image: url('../images/ken-ready.gif');
-  top: 15rem;
-  left: 10rem;
-  z-index: 20;
-}
-
-.ken-throwing-left {
-  background-image: url('../images/ken-throwing-left.jpg');
-  top: 21rem;
-  left: 59rem;
-}
 
 
 
