@@ -34,7 +34,7 @@ body {
 
 .main {
   background-color: white;
-  margin-top: 91px;
+  margin-top: 75px;
   padding-left: 100px;
   min-width: 1200px;
   height: 650px;
@@ -81,7 +81,7 @@ header .intro .st-logo {
 header .intro .jQuery-logo {
   background-image: url("../images/jquery-logo.png");
   top: 5rem;
-  right: 30rem;
+  right: 33rem;
   width: 355px;
   height: 145px;
   z-index: 20;
@@ -89,8 +89,8 @@ header .intro .jQuery-logo {
 }
 
 header .intro .combination { /* in combination with text */
-  top: 5rem;
-  right: 26rem;
+  top: 6rem;
+  right: 29rem;
   font-size: 3rem;
   color: #0769AD;
   z-index: 20;
@@ -109,12 +109,10 @@ header .intro .ken-vs-ryu {
 /* -------- Controls layout styles --------- */
 
 .ryu-instructions {
-  top: -1rem;
   right: 51rem;
 }
 
 .ken-instructions {
-  top: -1rem;
   right: 7rem;
 }
 
