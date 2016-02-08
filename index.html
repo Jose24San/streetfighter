@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Streetfighter</title>
+	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+a
+	<header>
+		<img class="header-logo" src="images/st-header.jpg" alt="street fighter five logo" width="200" height="90">
+		<div class="intro">
+			<div class="st-logo position display"></div>
+			<div class="jQuery-logo position display"></div>
+			<div class="combination position display">
+				<p>In combination with</p>
+			</div>
+			<div class="ken-vs-ryu action position display"></div>
+		</div>
+	</header>
+
+	<div class="main">
+		<div class="ryu">
+			 <div class="ryu-still ryu-action display position"></div>
+ 			 <div class="ryu-ready ryu-action display position"></div>
+  			 <div class="ryu-throwing ryu-action display position"></div>
+  			 <div class="ryu-cool ryu-action display position"></div>
+  			 <div class="ryu-kick ryu-action display position"></div>
+  			 <div class="ryu-punch ryu-action display position"></div>
+  			 <div class="ryu-stepping-kick ryu-action display position"></div>
+  			 <div class="ryu-evil-mad ryu-action display position"></div>
+  			 <div class="ryu-evil-ready ryu-action display position"></div>
+  			 <div class="hadouken display position"></div>
+		</div>
+
+		<div class="ken">
+			<div class="ken-left-stance display position ken-action"></div>
+			<div class="ken-throwing-left action display position ken-action"></div>
+			<div class="ken-standing-kick display position ken-action"></div>
+			<div class="ken-shinryuken display position ken-action"></div>
+			<div class="hadouken-left display position ken-action"></div>
+			<div class="ken-kick display position ken-action"></div>
+		</div>
+		
+		<div class="fighter-codes">
+			<ul class="ryu-instructions position display">
+				<li>Click on Ryu to shoot a hadouken</li>
+				<li>Mouse over Ryu to switch to evil Ryu</li>
+				<li>Hold down a for Ryu's cool pose with theme song</li>
+				<li>Hold down s for flying kick </li>
+				<li>Hold down d for flying punch</li>
+				<li>Hold down f for Stepping kick</li>
+			</ul>
+			<ul class="ken-instructions position display">
+				<li>Hold down j for standing kick</li>
+				<li>Hold down k for hadouken</li>
+				<li>Hold down l for shinryuken</li>
+				<li>Hold down ; for flying kick</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<audio id="hadouken-sound" src="sound/hadouken.mp3"></audio>
+	<audio id="Toulouse-song" src="sound/Toulouse.mp3"></audio>
+	<audio id="intro-theme" src="sound/ST-theme.mp3"></audio>
+
+
+	
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

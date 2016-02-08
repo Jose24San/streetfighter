@@ -1,0 +1,260 @@
+/* * {
+   border: 1px solid red;
+} 
+
+ CSS reset
+    (all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/*---------- General styles-----------*/
+
+
+body {
+  background-color: #1F1B1B;
+}
+
+.main {
+  background-color: white;
+  margin-top: 75px;
+  padding-left: 100px;
+  min-width: 1200px;
+  height: 650px;
+  position: relative;
+  z-index: 10;
+}
+
+.main .fighter-codes ul {
+  list-style: none;
+  font-size: 1.3rem;
+  font-family: "Indie Flower", cursive;
+}
+
+.position {
+  position: absolute;
+}
+
+.display {
+  display: none;
+  background-repeat: no-repeat;
+}
+
+
+/* Header styles
+    (all the styles inside the < header > or < nav > tags)
+*/
+
+header .header-logo {
+  position: absolute;
+  top:0rem;
+  left:35rem;
+  z-index: 99;
+}
+
+header .intro .st-logo {
+  background-image: url("../images/ST-logo.png");
+  top: 8rem;
+  right: 35rem;
+  width: 250px;
+  height: 145px;
+  z-index: 20;
+}
+
+header .intro .jQuery-logo {
+  background-image: url("../images/jquery-logo.png");
+  top: 5rem;
+  right: 33rem;
+  width: 355px;
+  height: 145px;
+  z-index: 20;
+
+}
+
+header .intro .combination { /* in combination with text */
+  top: 6rem;
+  right: 29rem;
+  font-size: 3rem;
+  color: #0769AD;
+  z-index: 20;
+}
+
+header .intro .ken-vs-ryu {
+  background-image: url('../images/ken-vs-ryu.gif');
+  top: 16rem;
+  left: 27rem;
+  width:450px;
+  height: 400px;
+  z-index: 20;
+}
+
+
+/* -------- Controls layout styles --------- */
+
+.ryu-instructions {
+  right: 51rem;
+}
+
+.ken-instructions {
+  right: 7rem;
+}
+
+/* ---------- Content stles ---------------- */
+
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .ryu-kick, .ryu-kick, .ryu-evil-ready, .ryu-evil-mad {
+  width: 420px;
+  height: 355px;
+}
+
+.main .ryu .hadouken {
+  background-image: url('../images/hadouken-resized.gif');
+  width: 156px; 
+  height: 90px;
+  z-index: 10;
+  top: 24.625rem;
+  left: 23.375rem;
+}
+
+.main .ryu .ryu-ready {
+  background-image: url('../images/ryu-ready-resized.gif');
+  top: 13rem;
+  left: 4rem;
+}
+
+.main .ryu .ryu-still {
+  background-image: url('../images/ryu-standing-still-resized.jpg');
+  background-repeat: no-repeat;
+  top: 14rem;
+  left: 8rem;
+}
+
+.main .ryu .ryu-throwing {
+  background-image: url('../images/ryu.throwing.hadouken.jpg');
+  top: 21rem;
+  left: 10rem;
+}
+
+.main .ryu .ryu-cool {
+  background-image: url('../images/ryu-cool-resized.gif');
+  top: 12rem;
+  left: 4rem;
+}
+
+.main .ryu .ryu-kick {
+  background-image: url('../images/flying-kick-resized.gif');
+  top: 13rem;
+  left: 0rem;
+}
+.main .ryu .ryu-punch {
+  background-image: url("../images/ryu-flying-punch-resized.gif");
+  width: 420px;
+  height: 700px;
+  
+}
+
+.main .ryu .ryu-stepping-kick {
+  background-image: url('../images/ryu-stepping-kick.gif');
+  width: 571px;
+  height: 355px;
+  top: 18rem;
+  left: 6rem;
+}
+
+.main .ryu .ryu-evil-mad {
+  background-image: url('../images/ryu-evil-mad.gif');
+  top: 16rem;
+  left: 7rem;
+}
+
+.main .ryu .ryu-evil-ready {
+  background-image: url('../images/ryu-evil-ready.gif');
+  top: 16rem;
+  left: 12rem;
+}
+
+/* -------- Ken's animation --------- */
+
+
+
+.ken-ready, .ken-throwing, .ken-throwing-left, .ken-left-stance {
+  width:300px;
+  height: 400px;
+}
+
+.main .ken .ken-left-stance {
+  background-image: url('../images/ken-left-stance.gif');
+  top: 15rem;
+  left: 65rem;
+}
+
+.main .ken .ken-throwing-left {
+  background-image: url('../images/ken-throwing-left.jpg');
+  top: 23rem;
+  left: 60rem;
+}
+
+.main .ken .ken-standing-kick {
+  background-image: url('../images/ken-standing-kick.gif');
+  width:35rem;
+  height: 27.25rem;
+  top: 10rem;
+  left: 45rem;
+}
+
+.main .ken .ken-shinryuken {
+  background-image: url('../images/ken-shinryuken.gif');
+  top: -5rem;
+  left: 53rem;
+  width: 32.18rem;
+  height: 41.37rem;
+}
+
+.main .ken .hadouken-left {
+  background-image: url('../images/hadouken-left.gif');
+  top: 25rem;
+  right: 22rem;
+  width: 5.68rem;
+  height: 4.625rem;
+}
+
+.main .ken .ken-kick {
+  background-image: url('../images/ken-kick.gif');
+  top: -1rem;
+  left: 42rem;
+  width: 38.37rem;
+  height: 37.375rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
